@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="preload" as="image" href="background.jpg">
     <title>2KFEPC | Login</title>
+
 </head>
-<body>
+<body class="login">
+
+    <form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+
     <div class="box">
         <div class="container">
             <div class="top-header">
@@ -15,6 +36,8 @@
                     <header>Login</header>
                 
             </div>
+            <form class="customform" name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
             <div class="input-field">
                 <input type="text" class="input" placeholder="Usuario" required>
                 <i class="bx bx-user"></i>
@@ -27,6 +50,8 @@
                 <input type="submit" class="submit" value="Login">
                 
             </div>
+        </form>
+        $(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
 
             <div class="bottom">
                 <div class="left">
@@ -40,5 +65,10 @@
 
         </div>
     </div>
+    <script type="text/javascript">
+        <!--
+          document.login.username.focus();
+        //-->
+        </script>
 </body>
 </html>
