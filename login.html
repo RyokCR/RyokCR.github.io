@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="background.jpg">
+    <title>2KFEPC | Login</title>
+    <!--  
+    <picture class="backgroundImageSet">
+    <source media="(min-width: 900px)" srcset="BigImage.png">
+    <source media="(min-width: 480px)" srcset="MediumImage.png">
+    </picture>
+    <script>
+    function setBackground(){
+        document.body.style.background = "url('"backgroundImageSet"') no-repeat center fixed" ;
+        document.body.style.backgroundSize = "100% 100%";
+        
+    }    
+    window.onload = setBackground;
+    </script>
+    -->
+    
+</head>
+<body class="login" >
+
+    <form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+
+    
+
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <span> </span>
+                    <header>Posee una cuenta?</header>
+                
+            </div>
+            <form class="customform" name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+            <div class="input-field">
+                <input type="text" class="input" placeholder="Usuario" required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" class="input" placeholder="Contraseña" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="submit" value="Login">
+                
+            </div>
+        </form>
+        $(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        <!--
+          document.login.username.focus();
+        //-->
+        </script>
+</body>
+</html>

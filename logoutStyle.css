@@ -1,0 +1,11 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("logo.PNG");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+}
