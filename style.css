@@ -2,7 +2,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media(max-width: 480px){
+@media(max-width: 900px){
 body{
     background-image: url("background.jpg");
     background-size: 100% 100%;
