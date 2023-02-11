@@ -2,8 +2,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@media(max-width: 480px){
 body{
-    max-width: 480px;
     background-image: url("background.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -11,14 +11,16 @@ body{
     background-attachment: fixed;
     backdrop-filter: blur(2px);
 }
+}
+@media(max-width: 1480px){
 body{
-    max-width: 1400px;
     background-image: url("1BEBA06F-6FDB-4190-A1FC-FB1EE81C1022.JPEG");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
     backdrop-filter: blur(2px);
+}
 }
 .box{
     display: flex;
