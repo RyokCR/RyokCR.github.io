@@ -2,7 +2,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media(max-width: 900px){
 body{
     background-image: url("background.jpg");
     background-size: 100% 100%;
@@ -11,8 +10,8 @@ body{
     background-attachment: fixed;
     backdrop-filter: blur(2px);
 }
-}
-@media(max-width: 1480px){
+
+@media(min-width: 1000px){
 body{
     background-image: url("1BEBA06F-6FDB-4190-A1FC-FB1EE81C1022.JPEG");
     background-size: 100% 100%;
