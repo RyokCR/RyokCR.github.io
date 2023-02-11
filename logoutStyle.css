@@ -3,6 +3,15 @@
 }
 
 body{
+    max-width: 480px;
+    background-image: url("logoSmall.PNG");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+}
+body{
+    max-width: 1400px;
     background-image: url("logo.PNG");
     background-size: 100% 100%;
     background-repeat: no-repeat;
