@@ -11,7 +11,7 @@ body{
     backdrop-filter: blur(2px);
 }
 
-@media(min-width: 2000px){
+@media(min-width: 1400px){
 body{
     background-image: url("1BEBA06F-6FDB-4190-A1FC-FB1EE81C1022.JPEG");
     background-size: 100% 100%;
